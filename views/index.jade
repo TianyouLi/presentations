@@ -1,0 +1,46 @@
+extends layout
+
+append css
+  link(rel='stylesheet', href='css/design/treemap.css')
+
+block content
+  .reveal
+    .slides
+      section
+        h1 Presentation Tool
+      section
+        h2 Why need a 'new' tool?
+        ul
+          li Not easy to share presentations 
+          li No version control, modifications can hardly be tracked
+          li Quite a 'flat' flow, no structural way to navigate from higher level abstraction down to lower details
+      section
+        h2 Requirements
+        ul
+          li Easy to share with others
+          li Content can be tracked with version history
+          li Can gather feedbacks/reviews along with version history
+          li Structurally organize information in different abstraction level
+          li Easy to maintain
+      section
+        h2 High Level Architecture
+        .architecture
+      section
+        h2 Tested Applications
+        #applications
+
+        
+append scripts
+  script(src='components/d3/d3.js')
+  script(src='js/design/treemap.js')
+  script(src='js/design/table.js')
+    
+  script(type='text/javascript').
+    var all = !{dpm};
+
+    // render application table
+    d3.select('#applications')
+      .call(SortableTable, all.applications);
+
+
+    

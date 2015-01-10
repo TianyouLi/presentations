@@ -1,0 +1,13 @@
+{
+  "name": "presentations",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.2",
+    "d3": "mbostock/d3#~3.5.3"
+  }
+}
