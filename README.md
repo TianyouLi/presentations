@@ -1,3 +1,6 @@
+Presentations: Web Presentation By Reveal, D3, NeDB, Node, Jade and Q
+=====================================================================
+
 Normally, just:
 npm install && bower install
 
