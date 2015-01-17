@@ -10,6 +10,14 @@ html(lang='en')
       link(rel='stylesheet', href='components/reveal.js/css/theme/default.css')
     block js
       script(src='http://localhost:35729/livereload.js')
+    // add support for print pdf
+    script(type='text/javascript').
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'components/reveal.js/css/print/pdf.css' : 'components/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+
   body
     block content
     block scripts
